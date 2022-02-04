@@ -9,12 +9,19 @@ as
     FUNCTION kreis(r number ) return number;
     -- neu
     procedure p_area(a number, b number, o out number);
+    function add5(num number) return number;
 END;
 /
 
 
 create or replace PACKAGE BODY GEOMETRIE
 as 
+    function add5(num number) return number
+    as 
+    begin
+        return num +5 ;
+    end;
+
    FUNCTION area(a number, b number)return number
    as
    BEGIN
